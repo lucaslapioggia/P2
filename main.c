@@ -82,3 +82,36 @@ int validacionSexo(char sexo)
 
     return flag;
 }
+
+//EJERCICIO 2
+
+void MuestraArreglo(Paciente paciente[30], int validos)
+{
+    int i;
+
+    for(i=0; i<validos; i++)
+    {
+        muestraArregloIndividual(paciente[i]);
+    }
+
+}
+
+void muestraArregloIndividual(Paciente paciente)
+{
+    printf("| Nombre: %-60s  | \n", paciente.nombre);
+    printf("| Dni:  %-63i | \n", paciente.dni);
+    printf("|Edad: %-62i | \n", paciente.edad);
+    if(paciente.sexo =='m')
+    {
+        printf("| Sexo: Masculino");
+    }
+    else
+    {
+        printf("| Sexo: Femenino");
+    }
+
+    printf("| Cantidad de atenciones: %-44i | \n",paciente.cantidadDeAtenciones);
+    printf("| Ultima patologia: %-50s | \n\n", paciente.ultimaPatologia);
+}
+
+
